@@ -205,7 +205,7 @@
         <div class="content has-text-justified">
           <p>
             We present a system that allows for accurate, fast, and robust estimation of camera parameters and depth maps
-            from casual monocular videos of dynamic scenes. Most conventional structure from motion and monocular SLAM techniques assume input videos that feature predominantly static scenes with large amounts of parallax. Such methods tend to produce erroneous estimates in the absence of these conditions. Recent neural network based approaches attempt to overcome these challenges; however, such methods are either computationally expensive or brittle when run on dynamic videos with uncontrolled camera motion or unknown field of view. We demonstrate the surprising effectiveness of the deep visual SLAM framework, and with careful modifications to its training and inference schemes, this system can scale to real-world videos of complex dynamic scenes with unconstrained camera paths, including videos with little camera parallax. Extensive experiments on both synthetic and real videos demonstrate that our system is significantly more accurate and robust at camera pose and depth estimation when compared with prior and concurrent work, with faster or comparable running times.
+            from casual monocular videos of dynamic scenes. Most conventional structure from motion and monocular SLAM techniques assume input videos that feature predominantly static scenes with large amounts of parallax. Such methods tend to produce erroneous estimates in the absence of these conditions. Recent neural network based approaches attempt to overcome these challenges; however, such methods are either computationally expensive or brittle when run on dynamic videos with uncontrolled camera motion or unknown field of view. We demonstrate the surprising effectiveness of recently proposed deep visual SLAM frameworks for this setting. We show that with careful modifications to their training and inference schemes they can scale to real-world videos of complex dynamic scenes with unconstrained camera paths, including videos with little camera parallax. Extensive experiments on both synthetic and real videos demonstrate that our system is significantly more accurate and robust at camera pose and depth estimation when compared with prior and concurrent work, with faster or comparable running times.
           </p>
         </div>
       </div>
@@ -242,52 +242,11 @@
     </div>
 
 <br>
-<!-- <section> -->
-<!-- <br> -->
-
-
-
-
-<!-- <div class="columns is-centered has-text-centered">
-  <div class="column is-full-width">
-    <h2 class="title is-3">Related Work</h2>
-    <div class="content has-text-justified">
-      We would like to acknowledge the following inspring prior work,
-      which proposed frequency space motion representations for video
-      processing and animation.
-      <ul>
-        <li><a href="https://grail.cs.washington.edu/projects/StochasticMotionTextures/"
-        target="_blank">Animating Pictures with Stochastic Motion
-        Textures</a> (Yung-Yu Chuang, et al.)</li>
-        <li><a href="http://www.interactivedynamicvideo.com/"
-        target="_blank">Image-space Modal Bases for Plausible
-        Manipulation of Objects in Video</a> (Davis, Chen, and Durand)</li>
-        <li><a href="https://dspace.mit.edu/handle/1721.1/107330"
-        target="_blank">Visual Vibration Analysis</a> (Abe Davis)</li>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div> -->
-<!--     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths"><br><br>
-        <h3 class="title is-3">Related work</h3>
-        <div class="content has-text-justified">
-	<ul>
-	<li><a href="http://www.interactivedynamicvideo.com/">Interactive Dynamic Video</a></li>
-	<li><a href="https://grail.cs.washington.edu/projects/StochasticMotionTextures/">Animating Pictures with Stochastic Motion Textures</a></li>
-	<li><a href="http://eulerian.cs.washington.edu/">Animating Pictures with Eulerian Motion Fields</a></li>
-	</ul>
-        </div>
-      </div>
-    </div> -->
-
-  <!-- </div> -->
   <div class="columns is-centered has-text-centered">
     <div class="column is-four-fifths"><br><br>
       <h2 class="title is-3">Acknowledgements</h3>
       <div class="content has-text-justified">
-          Thanks to Rick Szeliski, Peter Hedman, Andrew Liu, Boyang Deng, and Lucy Chai for helpful proofreading, comments and discussions.
+          Thanks to Rick Szeliski, Peter Hedman, Andrew Liu, Boyang Deng, and Lucy Chai for helpful proofreading, comments, and discussions.
       </div>
     </div>
   </div>
@@ -304,11 +263,12 @@
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>
-      @inproceedings{li2024_MegaSaM,
-      title     = {MegaSaM: Accurate, Fast and Robust Structure and Motion from Casual Dynamic Videos},
-      author    = {Li, Zhengqi and Tucker, Richard and Cole, Forrester and Wang, Qianqian and Jin, Linyi and Ye, Vickie and Kanazawa, Angjoo and Holynski, Aleksander and Snavely, Noah},
-      year      = {2024}
-    }</code></pre>
+      @article{li2024_MegaSaM,
+        title     = {{MegaSaM}: Accurate, Fast and Robust Structure and Motion from Casual Dynamic Videos},
+        author    = {Li, Zhengqi and Tucker, Richard and Cole, Forrester and Wang, Qianqian and Jin, Linyi and Ye, Vickie and Kanazawa, Angjoo and Holynski, Aleksander and Snavely, Noah},
+        journal={arXiv preprint},
+        year      = {2024}
+      }</code></pre>
   </div>
 </section>
 
