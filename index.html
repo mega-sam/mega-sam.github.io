@@ -28,11 +28,14 @@
         rel="stylesheet">
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/index.js"></script>
   <script src="./static/js/viewer.js"></script>
 <style>
 #interactive {
@@ -232,26 +235,541 @@
       </div>
     </div>
     <!--/ Abstract. -->
+  </div>
+</section>
+    <!-- gallery -->
 
-    <div class="container is-max-desktop">
-      <div class="hero-body">
-        <center>
-        <video id="teaser" autoplay muted loop playsinline width="90%">
-          <source src="static/videos/Gallery-2-rf26.mp4" type="video/mp4">
-        </video>
-        </center>
-        <div class="columns is-centered">
-        <div class="column is-centered is-two-thirds">
-        <h3 class="subtitle has-text-centered">
-          <font size="2">
-          <span class="dnerf"> </span> 
-          We show results from MegaSaM on a variety of monocular videos</font>
-        </h3>
+<section class="hero is-light is-small">
+  <div class="hero-body nopadding">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        
+        <div class="item item-fullbody">
+          <!-- butterfly_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="450px" width="auto">
+            <source src="static/videos/gallery/codec/butterfly_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        <br>
+          <!-- goat_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
+            <source src="static/videos/gallery/codec/goat_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
         </div>
+        
+        
+        <div class="item item-fullbody">
+          <!-- mountain_1_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="450px" width="auto">
+            <source src="static/videos/gallery/codec/mountain_1_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        <br>
+          <!-- breakdance_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
+            <source src="static/videos/gallery/codec/breakdance_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
         </div>
+        
+        
+        <div class="item item-fullbody">
+          <!-- rhino_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="450px" width="auto">
+            <source src="static/videos/gallery/codec/rhino_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        <br>
+          <!-- ambush_4_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
+            <source src="static/videos/gallery/codec/ambush_4_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        </div>
+        
+        
+        <div class="item item-fullbody">
+          <!-- dogs-scale_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="450px" width="auto">
+            <source src="static/videos/gallery/codec/dogs-scale_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        <br>
+          <!-- drone_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
+            <source src="static/videos/gallery/codec/drone_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        </div>
+        
+        
+        <div class="item item-fullbody">
+          <!-- dog-gooses_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="450px" width="auto">
+            <source src="static/videos/gallery/codec/dog-gooses_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        <br>
+          <!-- bike-packing_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
+            <source src="static/videos/gallery/codec/bike-packing_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        </div>
+        
+        
+        <div class="item item-fullbody">
+          <!-- pigeon_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="450px" width="auto">
+            <source src="static/videos/gallery/codec/pigeon_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        <br>
+          <!-- elephant_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
+            <source src="static/videos/gallery/codec/elephant_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        </div>
+        
+        
+        <div class="item item-fullbody">
+          <!-- ambush_5_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="450px" width="auto">
+            <source src="static/videos/gallery/codec/ambush_5_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        <br>
+          <!-- italian-pup_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
+            <source src="static/videos/gallery/codec/italian-pup_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        </div>
+        
+        
+        <div class="item item-fullbody">
+          <!-- market_5_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="450px" width="auto">
+            <source src="static/videos/gallery/codec/market_5_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        <br>
+          <!-- shaman_3_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
+            <source src="static/videos/gallery/codec/shaman_3_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        </div>
+        
+        
+        <div class="item item-fullbody">
+          <!-- cat-spinning_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="450px" width="auto">
+            <source src="static/videos/gallery/codec/cat-spinning_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        <br>
+          <!-- sleeping_1_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
+            <source src="static/videos/gallery/codec/sleeping_1_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        </div>
+        
+        
+        <div class="item item-fullbody">
+          <!-- cat-piano_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="450px" width="auto">
+            <source src="static/videos/gallery/codec/cat-piano_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        <br>
+          <!-- loading_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
+            <source src="static/videos/gallery/codec/loading_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        </div>
+        
+        
+        <div class="item item-fullbody">
+          <!-- PXL_20221028_213745015.TS_i1_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="450px" width="auto">
+            <source src="static/videos/gallery/codec/PXL_20221028_213745015.TS_i1_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        <br>
+          <!-- kid-running_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
+            <source src="static/videos/gallery/codec/kid-running_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        </div>
+        
+        
+        <div class="item item-fullbody">
+          <!-- VID_20200902_173923_i1_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="450px" width="auto">
+            <source src="static/videos/gallery/codec/VID_20200902_173923_i1_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        <br>
+          <!-- shutterstock_1038326681_i1_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
+            <source src="static/videos/gallery/codec/shutterstock_1038326681_i1_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        </div>
+        
+        
+        <div class="item item-fullbody">
+          <!-- creeper_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="450px" width="auto">
+            <source src="static/videos/gallery/codec/creeper_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        <br>
+          <!-- rollerblade_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
+            <source src="static/videos/gallery/codec/rollerblade_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        </div>
+        
+        
+        <div class="item item-fullbody">
+          <!-- camel_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="450px" width="auto">
+            <source src="static/videos/gallery/codec/camel_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        <br>
+          <!-- tiger_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
+            <source src="static/videos/gallery/codec/tiger_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        </div>
+        
+        
+        <div class="item item-fullbody">
+          <!-- bear_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="450px" width="auto">
+            <source src="static/videos/gallery/codec/bear_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        <br>
+          <!-- seal_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
+            <source src="static/videos/gallery/codec/seal_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        </div>
+        
+        
+        <div class="item item-fullbody">
+          <!-- cat-walking_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="450px" width="auto">
+            <source src="static/videos/gallery/codec/cat-walking_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        <br>
+          <!-- spin_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
+            <source src="static/videos/gallery/codec/spin_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        </div>
+        
+        
+        <div class="item item-fullbody">
+          <!-- lab-coat_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="450px" width="auto">
+            <source src="static/videos/gallery/codec/lab-coat_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        <br>
+          <!-- car-shadow_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
+            <source src="static/videos/gallery/codec/car-shadow_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        </div>
+        
+        
+        <div class="item item-fullbody">
+          <!-- child-field_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="450px" width="auto">
+            <source src="static/videos/gallery/codec/child-field_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        <br>
+          <!-- dog-rotation-vase_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
+            <source src="static/videos/gallery/codec/dog-rotation-vase_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        </div>
+        
+        
+        <div class="item item-fullbody">
+          <!-- soapbox_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="450px" width="auto">
+            <source src="static/videos/gallery/codec/soapbox_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        <br>
+          <!-- teddy_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
+            <source src="static/videos/gallery/codec/teddy_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        </div>
+        
+        
+        <div class="item item-fullbody">
+          <!-- breakdance-flare_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="450px" width="auto">
+            <source src="static/videos/gallery/codec/breakdance-flare_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        <br>
+          <!-- parkour_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
+            <source src="static/videos/gallery/codec/parkour_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        </div>
+        
+        
+        <div class="item item-fullbody">
+          <!-- pillow_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="450px" width="auto">
+            <source src="static/videos/gallery/codec/pillow_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        <br>
+          <!-- mochi-high-five_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
+            <source src="static/videos/gallery/codec/mochi-high-five_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        </div>
+        
+        
+        <div class="item item-fullbody">
+          <!-- cows_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="450px" width="auto">
+            <source src="static/videos/gallery/codec/cows_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        <br>
+          <!-- sriracha-tree_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
+            <source src="static/videos/gallery/codec/sriracha-tree_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        </div>
+        
+        
+        <div class="item item-fullbody">
+          <!-- spin_mon.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="450px" width="auto">
+            <source src="static/videos/gallery/codec/spin_mon.mp4" type="video/mp4">
+          </video>
+        <br>
+          <!-- 5534310-hd_1080_1920_30fps_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
+            <source src="static/videos/gallery/codec/5534310-hd_1080_1920_30fps_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        </div>
+        
+        
+        <div class="item item-fullbody">
+          <!-- car-turn_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="450px" width="auto">
+            <source src="static/videos/gallery/codec/car-turn_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        <br>
+          <!-- 1076859440_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
+            <source src="static/videos/gallery/codec/1076859440_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        </div>
+        
+        
+        <div class="item item-fullbody">
+          <!-- tennis_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="450px" width="auto">
+            <source src="static/videos/gallery/codec/tennis_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        <br>
+          <!-- rice-field_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
+            <source src="static/videos/gallery/codec/rice-field_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        </div>
+        
+        
+        <div class="item item-fullbody">
+          <!-- rallye_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="450px" width="auto">
+            <source src="static/videos/gallery/codec/rallye_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        <br>
+          <!-- bamboo_2_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
+            <source src="static/videos/gallery/codec/bamboo_2_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        </div>
+        
+        
+        <div class="item item-fullbody">
+          <!-- handwavy_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="450px" width="auto">
+            <source src="static/videos/gallery/codec/handwavy_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        <br>
+          <!-- alley_1_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
+            <source src="static/videos/gallery/codec/alley_1_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        </div>
+        
+        
+        <div class="item item-fullbody">
+          <!-- judo_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="450px" width="auto">
+            <source src="static/videos/gallery/codec/judo_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        <br>
+          <!-- schoolgirls_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
+            <source src="static/videos/gallery/codec/schoolgirls_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        </div>
+        
+        
+        <div class="item item-fullbody">
+          <!-- libby_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="450px" width="auto">
+            <source src="static/videos/gallery/codec/libby_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        <br>
+          <!-- backpack_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
+            <source src="static/videos/gallery/codec/backpack_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        </div>
+        
+        
+        <div class="item item-fullbody">
+          <!-- shutterstock_1058262031_i1_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="450px" width="auto">
+            <source src="static/videos/gallery/codec/shutterstock_1058262031_i1_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        <br>
+          <!-- varanus-cage_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
+            <source src="static/videos/gallery/codec/varanus-cage_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        </div>
+        
+        
+        <div class="item item-fullbody">
+          <!-- 2796077-uhd_3840_2160_25fps_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="450px" width="auto">
+            <source src="static/videos/gallery/codec/2796077-uhd_3840_2160_25fps_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        <br>
+          <!-- horsejump-high_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
+            <source src="static/videos/gallery/codec/horsejump-high_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        </div>
+        
+        
+        <div class="item item-fullbody">
+          <!-- cat-girl_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="450px" width="auto">
+            <source src="static/videos/gallery/codec/cat-girl_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        <br>
+          <!-- F_165554287_XjE70kEJDhrciruRSCTmjcs6Z28xtu8G_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
+            <source src="static/videos/gallery/codec/F_165554287_XjE70kEJDhrciruRSCTmjcs6Z28xtu8G_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        </div>
+        
+        
+        <div class="item item-fullbody">
+          <!-- cat-walk-right_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="450px" width="auto">
+            <source src="static/videos/gallery/codec/cat-walk-right_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        <br>
+          <!-- car-roundabout_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
+            <source src="static/videos/gallery/codec/car-roundabout_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        </div>
+        
+        
+        <div class="item item-fullbody">
+          <!-- paper-windmill_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="450px" width="auto">
+            <source src="static/videos/gallery/codec/paper-windmill_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        <br>
+          <!-- s_101_outdoor_walking_backward_dancing_person_daytime_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
+            <source src="static/videos/gallery/codec/s_101_outdoor_walking_backward_dancing_person_daytime_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        </div>
+        
+        
+        <div class="item item-fullbody">
+          <!-- swing_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="450px" width="auto">
+            <source src="static/videos/gallery/codec/swing_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        <br>
+          <!-- tractor-sand_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
+            <source src="static/videos/gallery/codec/tractor-sand_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        </div>
+        
+        
+        <div class="item item-fullbody">
+          <!-- skiing_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="450px" width="auto">
+            <source src="static/videos/gallery/codec/skiing_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        <br>
+          <!-- alley_2_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
+            <source src="static/videos/gallery/codec/alley_2_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        </div>
+        
+        
+        <div class="item item-fullbody">
+          <!-- baby_2_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="450px" width="auto">
+            <source src="static/videos/gallery/codec/baby_2_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        <br>
+          <!-- bmx-trees_ours-align.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
+            <source src="static/videos/gallery/codec/bmx-trees_ours-align.mp4" type="video/mp4">
+          </video>
+        </div>
+        
+        
+        <div class="item item-fullbody">
+          <!-- drift-chicane_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="450px" width="auto">
+            <source src="static/videos/gallery/codec/drift-chicane_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        <br>
+          <!-- scooter-gray_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
+            <source src="static/videos/gallery/codec/scooter-gray_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        </div>
+        
+        
+        <div class="item item-fullbody">
+          <!-- dog-agility_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="450px" width="auto">
+            <source src="static/videos/gallery/codec/dog-agility_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        <br>
+          <!-- baby_5_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
+            <source src="static/videos/gallery/codec/baby_5_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        </div>
+        
+        
+        <div class="item item-fullbody">
+          <!-- motorbike_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="450px" width="auto">
+            <source src="static/videos/gallery/codec/motorbike_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        <br>
+          <!-- 5739690-hd_1920_1080_24fps_sgd_cvd_hr.mp4 -->
+          <video poster="" id="fullbody" autoplay playsinline muted loop height="288px">
+            <source src="static/videos/gallery/codec/5739690-hd_1920_1080_24fps_sgd_cvd_hr.mp4" type="video/mp4">
+          </video>
+        </div>
+
+
       </div>
     </div>
-
+  </div>
+</section>
+    <!-- end gallery -->
+<section>
     <br>
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
