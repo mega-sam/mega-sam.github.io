@@ -163,6 +163,16 @@
                 </a>
               </span>
               <!-- Video Link. -->
+
+              <span class="link-block">
+<a href="#demo" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" style="fill: #ffdf0f"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 0c-25.3 0-47.2 14.7-57.6 36c-7-2.6-14.5-4-22.4-4c-35.3 0-64 28.7-64 64V261.5l-2.7-2.7c-25-25-65.5-25-90.5 0s-25 65.5 0 90.5L106.5 437c48 48 113.1 75 181 75H296h8c1.5 0 3-.1 4.5-.4c91.7-6.2 165-79.4 171.1-171.1c.3-1.5 .4-3 .4-4.5V160c0-35.3-28.7-64-64-64c-5.5 0-10.9 .7-16 2V96c0-35.3-28.7-64-64-64c-7.9 0-15.4 1.4-22.4 4C303.2 14.7 281.3 0 256 0zM240 96.1c0 0 0-.1 0-.1V64c0-8.8 7.2-16 16-16s16 7.2 16 16V95.9c0 0 0 .1 0 .1V232c0 13.3 10.7 24 24 24s24-10.7 24-24V96c0 0 0 0 0-.1c0-8.8 7.2-16 16-16s16 7.2 16 16v55.9c0 0 0 .1 0 .1v80c0 13.3 10.7 24 24 24s24-10.7 24-24V160.1c0 0 0-.1 0-.1c0-8.8 7.2-16 16-16s16 7.2 16 16V332.9c-.1 .6-.1 1.3-.2 1.9c-3.4 69.7-59.3 125.6-129 129c-.6 0-1.3 .1-1.9 .2H296h-8.5c-55.2 0-108.1-21.9-147.1-60.9L52.7 315.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0L119 336.4c6.9 6.9 17.2 8.9 26.2 5.2s14.8-12.5 14.8-22.2V96c0-8.8 7.2-16 16-16c8.8 0 16 7.1 16 15.9V232c0 13.3 10.7 24 24 24s24-10.7 24-24V96.1z"></path></svg>
+                  </span>
+		
+                  <span>Interactive Results</span>
+                </a>
+</span>
               <!-- Supp Link. -->
               <span class="link-block">
                 <a href="#"
@@ -804,6 +814,7 @@
     <br><br>
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
+	<a id="demo"></a>
         <h2 class="title is-3">Interactive examples</h2>
       </div>
     </div>
@@ -819,15 +830,13 @@
     </div>
     <br>
     Press Space to play/pause, drag to change camera.
-    <div class="load"><span style="color:red; font-weight:bold">TODO choose which examples to use</span><br>
-      <img src="static/thumbs/davis-bear.png" data-scene="davis-bear" data-forward=".5" data-zoom="2" data-distance="1.5" data-elevation=0
-      ><img src="static/thumbs/davis-bmx-trees.png" data-scene="davis-bmx-trees" data-zoom="2.5" data-rx=".4" data-ry="-.5"
+    <div class="load">
+      <img src="static/thumbs/pexels-5534310-hd_1080_1920_30fps.png" data-scene="pexels-5534310-hd_1080_1920_30fps"
+      ><img src="static/thumbs/davis-bear.png" data-scene="davis-bear" data-forward=".5" data-zoom="2" data-distance="1.5" data-elevation=0
       ><img src="static/thumbs/davis-breakdance-flare.png" data-scene="davis-breakdance-flare" data-forward=".5"
       ><img src="static/thumbs/davis-camel.png" data-scene="davis-camel" data-zoom=2 data-forward=".5" data-distance="1.5" data-elevation=".1" data-rx=".2"
       ><img src="static/thumbs/davis-car-roundabout.png" data-scene="davis-car-roundabout" data-forward=".5" data-distance=2 data-rx=".4" data-ry="-.5" data-zoom="1.5"
       ><img src="static/thumbs/davis-car-turn.png" data-scene="davis-car-turn" data-forward="0.5" data-ry=".5"
-      ><img src="static/thumbs/davis-cat-girl.png" data-scene="davis-cat-girl" data-zoom=2 data-rx=".4"
-      ><img src="static/thumbs/davis-drift-chicane.png" data-scene="davis-drift-chicane" data-forward=1 data-rx=".1" data-ry="-.5" data-zoom=".8"
       ><img src="static/thumbs/davis-drift-straight.png" data-scene="davis-drift-straight" data-forward=1 data-distance="2.5" data-ry=".8"
       ><img src="static/thumbs/davis-drone.png" data-scene="davis-drone" data-forward=".5" data-distance="1.5"
       ><img src="static/thumbs/davis-elephant.png" data-scene="davis-elephant" data-zoom="2.5"
@@ -835,22 +844,25 @@
       ><img src="static/thumbs/davis-lucia.png" data-scene="davis-lucia" data-elevation=".1" data-zoom="2.5" data-rx=".1" data-forward=".5" data-distance="2"
       ><img src="static/thumbs/davis-rhino.png" data-scene="davis-rhino" data-zoom="2.5"
       ><img src="static/thumbs/davis-soapbox.png" data-scene="davis-soapbox" data-ry="-1.1" data-forward=".5"
-      ><img src="static/thumbs/dycheck-apple.png" data-scene="dycheck-apple" data-zoom="1.5" data-rx=".2"
       ><img src="static/thumbs/dycheck-backpack.png" data-scene="dycheck-backpack" data-forward=".5"
       ><img src="static/thumbs/dycheck-paper-windmill.png" data-scene="dycheck-paper-windmill" data-rx=".6" data-forward=".5" data-elevation=".1" data-zoom="1.2"
-      ><img src="static/thumbs/dycheck-pillow.png" data-scene="dycheck-pillow" data-rx=".1" data-zoom="1.5"
-      ><img src="static/thumbs/dycheck-spin.png" data-scene="dycheck-spin" data-rx="-1.1" data-elevation=".1" data-forward=".5" data-distance=2 data-zoom="1.5"
-      ><img src="static/thumbs/dycheck-sriracha-tree.png" data-scene="dycheck-sriracha-tree" data-zoom=2
-      ><img src="static/thumbs/dycheck-teddy.png" data-scene="dycheck-teddy" data-zoom=2
-      ><img src="static/thumbs/pexels-5534310-hd_1080_1920_30fps.png" data-scene="pexels-5534310-hd_1080_1920_30fps"
       ><img src="static/thumbs/pexels-5739690-hd_1920_1080_24fps.png" data-scene="pexels-5739690-hd_1920_1080_24fps" data-ry="0.4" data-rx=".1" data-elevation=".1" data-forward=".5" data-zoom=2
       ><img src="static/thumbs/pexels-baby_5.png" data-scene="pexels-baby_5" data-zoom=2
       ><img src="static/thumbs/pexels-butterfly.png" data-scene="pexels-butterfly" data-elevation=".15" data-zoom=2 data-forward=".3" data-distance=2
-      ><img src="static/thumbs/pexels-cat-piano.png" data-scene="pexels-cat-piano" data-rx=".15" data-zoom=2 data-distance=2 data-forward=".5" data-elevation=".1"
-      ><img src="static/thumbs/pexels-cat-spinning.png" data-scene="pexels-cat-spinning" data-zoom=2
+      ><img src="static/thumbs/pexels-cat-piano.png" data-scene="pexels-cat-piano" data-rx=".15" data-zoom=2 data-distance=2 data-forward="1.5" data-elevation=".1"
       ><img src="static/thumbs/pexels-seal.png" data-scene="pexels-seal" data-zoom=5 data-rx=".2" data-elevation=".03" data-forward=".5" data-distance=2
       ><img src="static/thumbs/pexels-skiing.png" data-scene="pexels-skiing" data-forward=".5">
       
+      <!-- Aleks: removing these so we don't have too many examples --> 
+      <!-- <img src="static/thumbs/davis-bmx-trees.png" data-scene="davis-bmx-trees" data-zoom="2.5" data-rx=".4" data-ry="-.5"> -->
+      <!-- <img src="static/thumbs/davis-cat-girl.png" data-scene="davis-cat-girl" data-zoom=2 data-rx=".4"> -->
+      <!-- <img src="static/thumbs/dycheck-spin.png" data-scene="dycheck-spin" data-rx="-1.1" data-elevation=".1" data-forward=".5" data-distance=2 data-zoom="1.5"> -->
+      <!-- <img src="static/thumbs/davis-drift-chicane.png" data-scene="davis-drift-chicane" data-forward=1 data-rx=".1" data-ry="-.5" data-zoom=".8"> --> 
+      <!-- <img src="static/thumbs/dycheck-apple.png" data-scene="dycheck-apple" data-zoom="1.5" data-rx=".2"> --> 
+      <!-- <img src="static/thumbs/dycheck-pillow.png" data-scene="dycheck-pillow" data-rx=".1" data-zoom="1.5"> --> 
+      <!-- <img src="static/thumbs/dycheck-sriracha-tree.png" data-scene="dycheck-sriracha-tree" data-zoom=2> -->
+      <!-- <img src="static/thumbs/dycheck-teddy.png" data-scene="dycheck-teddy" data-zoom=2> -->
+      <!-- <img src="static/thumbs/pexels-cat-spinning.png" data-scene="pexels-cat-spinning" data-zoom=2> --> 
     </div>
     </center>
 
