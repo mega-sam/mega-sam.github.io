@@ -68,7 +68,7 @@
 </head>
 
 <body style="padding: 5%; padding-top: min(15px, 5%); width: 100%">
-    <div class="container-lg text-center" style="max-width: 1500px; margin: auto;" id="main">
+    <div class="container-lg text-center" style="max-width: 100%; margin: auto;" id="main">
         <!-- <div class="container" id="main"> -->
         <div class="row">
                 <h2 class="col-md-12 text-center">
@@ -132,7 +132,7 @@
             </span>
         </div>
 
-    <div class="container" id="videoGallery" class="video-gallery">
+    <div class="container video-gallery" id="videoGallery" style="max-width: 100%;">
   
       <!-- Thumbnails -->
       <div id="thumbnails" class="card-columns captioned_videos list"></div>
@@ -305,7 +305,7 @@ var intervalId = window.setInterval(function(){
         // componentVideo.preload = "metadata";
         componentVideo.muted = true;
         //componentVideo.width = "333";
-	componentVideo.style.width = "100%"
+	      componentVideo.style.width = "100%"
         componentVideo.autoplay = true;
         if (isIOS) {
           // Autoplay doesn't seem to work.
