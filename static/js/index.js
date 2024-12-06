@@ -1,14 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
   var options = {
-    slidesToScroll: 2,
-    slidesToShow: 2,
-    loop: true,
-    infinite: false,
-    pagination: false,
-    autoplay: true,
-    autoplaySpeed: 5000,
+			slidesToScroll: 1,
+			slidesToShow: 3,
+			loop: true,
+			infinite: true,
+			autoplay: false,
+			autoplaySpeed: 3000,
   };
 
   // Initialize all div with carousel class
   var carousels = bulmaCarousel.attach('.carousel', options);
 });
+
+window.HELP_IMPROVE_VIDEOJS = false;
+
