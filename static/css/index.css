@@ -114,32 +114,22 @@ body {
 .publication-body img {
 }
 
+
 .results-carousel {
   overflow: hidden;
-  margin: auto;
-  height: auto;
-  width: auto;
 }
 
 .results-carousel .item {
-  margin: 1px;
+  margin: 5px;
   overflow: hidden;
-  border: 0px solid #bbb;
+  border: 1px solid #bbb;
   border-radius: 10px;
   padding: 0;
   font-size: 0;
-  /*height: 220px;*/
-  /*width: 320px;*/
-/*  display: flex;
-  background-color: rgba(0, 0, 0, 1);
-  flex-basis: fit-content;
-  height: 320px;*/
 }
 
 .results-carousel video {
-  margin: 0 auto;
-  /*height: 200px;*/
-  /*width: 320px;*/
+  margin: 0;
 }
 
 
@@ -200,4 +190,14 @@ body {
     width: auto;
     height: 335px;
     object-fit: cover;
+}
+
+
+.carousel {
+  overflow: hidden;
+}
+
+#carousel {
+    margin-left: 0px;
+    margin-right: 0px;
 }
