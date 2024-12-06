@@ -40,7 +40,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/css/bulma-carousel.min.css">
   <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css">-->
-  <link rel="stylesheet" href="css/carousel.css" type="text/css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
@@ -252,26 +251,39 @@ We present a system that allows for accurate, fast, and robust estimation of cam
 <section>
     <div class="columns is-centered has-text-centered is-max-desktop">
       <div class="column is-three-fifths">
-<div class="notification is-warning is-light">
-	<a id="demo"></a>
-        <h2 class="title is-3" style="margin-bottom: 0.3em">
-<svg xmlns="http://www.w3.org/2000/svg" height="0.7em" viewBox="0 0 384 512" style="fill: #ccb20c"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M0 256L28.5 28c2-16 15.6-28 31.8-28H228.9c15 0 27.1 12.1 27.1 27.1c0 3.2-.6 6.5-1.7 9.5L208 160H347.3c20.2 0 36.7 16.4 36.7 36.7c0 7.4-2.2 14.6-6.4 20.7l-192.2 281c-5.9 8.6-15.6 13.7-25.9 13.7h-2.9c-15.7 0-28.5-12.8-28.5-28.5c0-2.3 .3-4.6 .9-6.9L176 288H32c-17.7 0-32-14.3-32-32z"></path></svg>
-Interactive examples
-<svg xmlns="http://www.w3.org/2000/svg" height="0.7em" viewBox="0 0 384 512" style="fill: #ccb20c"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M0 256L28.5 28c2-16 15.6-28 31.8-28H228.9c15 0 27.1 12.1 27.1 27.1c0 3.2-.6 6.5-1.7 9.5L208 160H347.3c20.2 0 36.7 16.4 36.7 36.7c0 7.4-2.2 14.6-6.4 20.7l-192.2 281c-5.9 8.6-15.6 13.7-25.9 13.7h-2.9c-15.7 0-28.5-12.8-28.5-28.5c0-2.3 .3-4.6 .9-6.9L176 288H32c-17.7 0-32-14.3-32-32z"></path></svg>
-</h2> 
-    <div style="margin-bottom: 0.3em">Pick a scene below to explore in 3D! Press Space to play/pause, click and drag to change viewpoint.</div>
+        <div class="notification is-warning is-light" style="padding: 1.0rem 1.0rem 1.0rem 1.0rem">
+          <a id="demo"></a>
+          
+              <h2 class="title is-3" style="margin-bottom: 0.3em"><div style="
+                display: flex; 
+                align-items: center; 
+                justify-content: center; 
+                gap: 1em; 
+                white-space: nowrap;
+                font-size: clamp(1rem, 5vw, 2rem); /* Responsive text size */
+              ">
+                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512" style="fill: #ccb20c; flex-shrink: 0;">
+                  <path d="M0 256L28.5 28c2-16 15.6-28 31.8-28H228.9c15 0 27.1 12.1 27.1 27.1c0 3.2-.6 6.5-1.7 9.5L208 160H347.3c20.2 0 36.7 16.4 36.7 36.7c0 7.4-2.2 14.6-6.4 20.7l-192.2 281c-5.9 8.6-15.6 13.7-25.9 13.7h-2.9c-15.7 0-28.5-12.8-28.5-28.5c0-2.3 .3-4.6 .9-6.9L176 288H32c-17.7 0-32-14.3-32-32z"></path>
+                </svg>
+                <span>Interactive examples</span>
+                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512" style="fill: #ccb20c; flex-shrink: 0;">
+                  <path d="M0 256L28.5 28c2-16 15.6-28 31.8-28H228.9c15 0 27.1 12.1 27.1 27.1c0 3.2-.6 6.5-1.7 9.5L208 160H347.3c20.2 0 36.7 16.4 36.7 36.7c0 7.4-2.2 14.6-6.4 20.7l-192.2 281c-5.9 8.6-15.6 13.7-25.9 13.7h-2.9c-15.7 0-28.5-12.8-28.5-28.5c0-2.3 .3-4.6 .9-6.9L176 288H32c-17.7 0-32-14.3-32-32z"></path>
+                </svg>
+              </div>
+              </h2> 
+            <div style="margin-bottom: 0.3em">Pick a scene below to explore in 3D! Press Space to play/pause, click and drag to change viewpoint.</div>
 
-    <div id="interactive" class="hero">
-      <canvas id="megaview" width="512" height="288"></canvas>
-      <div class="megabuttons">
-        <button onclick="state.other_points=state.other_points=='no'?'points':'no';">Show all points</button><br>
-        <button onclick="state.other_frusta=!state.other_frusta;">Show all frusta</button>
-      </div>
-      <div id="glfailed"><br><br>[Demo requres browser with WebGL2 support.]</div>
-      <div id="loading"><br><br>Loading...</div>
-    </div>
-    <br>
-<div style="font-size: 12px;"> (Note: scene geometry is downsampled for faster loading. Firefox may not properly render point clouds.)</div>
+            <div id="interactive" class="hero">
+              <canvas id="megaview" width="512" height="288"></canvas>
+              <div class="megabuttons">
+                <button onclick="state.other_points=state.other_points=='no'?'points':'no';">Show all points</button><br>
+                <button onclick="state.other_frusta=!state.other_frusta;">Show all frusta</button>
+              </div>
+              <div id="glfailed"><br><br>[Demo requres browser with WebGL2 support.]</div>
+              <div id="loading"><br><br>Loading...</div>
+            </div>
+            <br>
+        <div style="font-size: 12px;"> (Note: scene geometry is downsampled for faster loading. Firefox may not properly render point clouds.)</div>
     <div class="load">
       <img src="static/thumbs/pexels-5534310-hd_1080_1920_30fps.png" data-scene="pexels-5534310-hd_1080_1920_30fps"
       ><img src="static/thumbs/pexels-butterfly.png" data-scene="pexels-butterfly" data-elevation=".15" data-zoom=2 data-forward=".3" data-distance=2
