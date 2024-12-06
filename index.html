@@ -240,12 +240,76 @@ We present a system that allows for accurate, fast, and robust estimation of cam
     <!--/ Abstract. -->
 </section>
 
+
+<section>
+    <div class="columns is-centered has-text-centered is-max-desktop">
+      <div class="column is-three-fifths">
+<div class="notification is-warning is-light">
+	<a id="demo"></a>
+        <h2 class="title is-3" style="margin-bottom: 0.3em">
+<svg xmlns="http://www.w3.org/2000/svg" height="0.7em" viewBox="0 0 384 512" style="fill: #ccb20c"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M0 256L28.5 28c2-16 15.6-28 31.8-28H228.9c15 0 27.1 12.1 27.1 27.1c0 3.2-.6 6.5-1.7 9.5L208 160H347.3c20.2 0 36.7 16.4 36.7 36.7c0 7.4-2.2 14.6-6.4 20.7l-192.2 281c-5.9 8.6-15.6 13.7-25.9 13.7h-2.9c-15.7 0-28.5-12.8-28.5-28.5c0-2.3 .3-4.6 .9-6.9L176 288H32c-17.7 0-32-14.3-32-32z"></path></svg>
+Interactive examples
+<svg xmlns="http://www.w3.org/2000/svg" height="0.7em" viewBox="0 0 384 512" style="fill: #ccb20c"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M0 256L28.5 28c2-16 15.6-28 31.8-28H228.9c15 0 27.1 12.1 27.1 27.1c0 3.2-.6 6.5-1.7 9.5L208 160H347.3c20.2 0 36.7 16.4 36.7 36.7c0 7.4-2.2 14.6-6.4 20.7l-192.2 281c-5.9 8.6-15.6 13.7-25.9 13.7h-2.9c-15.7 0-28.5-12.8-28.5-28.5c0-2.3 .3-4.6 .9-6.9L176 288H32c-17.7 0-32-14.3-32-32z"></path></svg>
+</h2> 
+    <div style="margin-bottom: 0.3em">Pick a scene below to explore in 3D! Press Space to play/pause, click and drag to change viewpoint.</div>
+
+    <div id="interactive" class="hero">
+      <canvas id="megaview" width="512" height="288"></canvas>
+      <div class=megabuttons>
+        <button onclick="state.other_points=state.other_points=='no'?'points':'no';">Show all points</button><br>
+        <button onclick="state.other_frusta=!state.other_frusta;">Show all frusta</button>
+      </div>
+      <div id="glfailed"><br><br>[Demo requres browser with WebGL2 support.]</div>
+      <div id="loading"><br><br>Loading...</div>
+    </div>
+    <br>
+<div style="font-size: 12px;"> (Note: scene geometry is downsampled for faster loading.)</div>
+    <div class="load">
+      <img src="static/thumbs/pexels-5534310-hd_1080_1920_30fps.png" data-scene="pexels-5534310-hd_1080_1920_30fps"
+      ><img src="static/thumbs/davis-bear.png" data-scene="davis-bear" data-forward=".5" data-zoom="2" data-distance="1.5" data-elevation=0
+      ><img src="static/thumbs/davis-breakdance-flare.png" data-scene="davis-breakdance-flare" data-forward=".5"
+      ><img src="static/thumbs/davis-camel.png" data-scene="davis-camel" data-zoom=2 data-forward=".5" data-distance="1.5" data-elevation=".1" data-rx=".2"
+      ><img src="static/thumbs/davis-car-roundabout.png" data-scene="davis-car-roundabout" data-forward=".5" data-distance=2 data-rx=".4" data-ry="-.5" data-zoom="1.5"
+      ><img src="static/thumbs/davis-car-turn.png" data-scene="davis-car-turn" data-forward="0.5" data-ry=".5"
+      ><img src="static/thumbs/davis-drift-straight.png" data-scene="davis-drift-straight" data-forward=1 data-distance="2.5" data-ry=".8"
+      ><img src="static/thumbs/davis-drone.png" data-scene="davis-drone" data-forward=".5" data-distance="1.5"
+      ><img src="static/thumbs/davis-horsejump-high.png" data-scene="davis-horsejump-high" data-forward=".5" data-distance="1" data-ry="-.5" data-rx=".1"
+      ><img src="static/thumbs/davis-lucia.png" data-scene="davis-lucia" data-elevation=".1" data-zoom="2.5" data-rx=".1" data-forward=".5" data-distance="2"
+      ><img src="static/thumbs/davis-soapbox.png" data-scene="davis-soapbox" data-ry="-1.1" data-forward=".5"
+      ><img src="static/thumbs/dycheck-backpack.png" data-scene="dycheck-backpack" data-forward=".5"
+      ><img src="static/thumbs/dycheck-paper-windmill.png" data-scene="dycheck-paper-windmill" data-rx=".6" data-forward=".5" data-elevation=".1" data-zoom="1.2"
+      ><img src="static/thumbs/pexels-5739690-hd_1920_1080_24fps.png" data-scene="pexels-5739690-hd_1920_1080_24fps" data-ry="0.4" data-rx=".1" data-elevation=".1" data-forward=".5" data-zoom=2
+      ><img src="static/thumbs/pexels-baby_5.png" data-scene="pexels-baby_5" data-zoom=2
+      ><img src="static/thumbs/pexels-butterfly.png" data-scene="pexels-butterfly" data-elevation=".15" data-zoom=2 data-forward=".3" data-distance=2
+      ><img src="static/thumbs/pexels-cat-piano.png" data-scene="pexels-cat-piano" data-rx=".15" data-zoom=2 data-distance=2 data-forward="1.5" data-elevation=".1"
+      ><img src="static/thumbs/pexels-seal.png" data-scene="pexels-seal" data-zoom=5 data-rx=".2" data-elevation=".03" data-forward=".5" data-distance=2
+      ><img src="static/thumbs/pexels-skiing.png" data-scene="pexels-skiing" data-forward=".5">
+      
+      <!-- Aleks: removing these so we don't have too many examples --> 
+      <!-- <img src="static/thumbs/davis-bmx-trees.png" data-scene="davis-bmx-trees" data-zoom="2.5" data-rx=".4" data-ry="-.5"> -->
+      <!-- <img src="static/thumbs/davis-cat-girl.png" data-scene="davis-cat-girl" data-zoom=2 data-rx=".4"> -->
+      <!-- <img src="static/thumbs/dycheck-spin.png" data-scene="dycheck-spin" data-rx="-1.1" data-elevation=".1" data-forward=".5" data-distance=2 data-zoom="1.5"> -->
+      <!-- <img src="static/thumbs/davis-drift-chicane.png" data-scene="davis-drift-chicane" data-forward=1 data-rx=".1" data-ry="-.5" data-zoom=".8"> --> 
+      <!-- <img src="static/thumbs/dycheck-apple.png" data-scene="dycheck-apple" data-zoom="1.5" data-rx=".2"> --> 
+      <!-- <img src="static/thumbs/dycheck-pillow.png" data-scene="dycheck-pillow" data-rx=".1" data-zoom="1.5"> --> 
+      <!-- <img src="static/thumbs/dycheck-sriracha-tree.png" data-scene="dycheck-sriracha-tree" data-zoom=2> -->
+      <!-- <img src="static/thumbs/dycheck-teddy.png" data-scene="dycheck-teddy" data-zoom=2> -->
+      <!-- <img src="static/thumbs/pexels-cat-spinning.png" data-scene="pexels-cat-spinning" data-zoom=2> --> 
+      <!-- <img src="static/thumbs/davis-elephant.png" data-scene="davis-elephant" data-zoom="2.5"> -->
+      <!-- <img src="static/thumbs/davis-rhino.png" data-scene="davis-rhino" data-zoom="2.5"> -->
+    </div>
+    </center>
+</div><br>
+
+</section>
+
+
 <section class="section has-carousel" id="carousel" style="padding: 0; margin: auto; ">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Gallery</h2>
+        <h2 class="title is-3">Results Gallery</h2>
 </div>
 </div>
 </div>
@@ -812,68 +876,6 @@ We present a system that allows for accurate, fast, and robust estimation of cam
       </div>
     </div>
   </div>
-</section>
-
-<section>
-    <div class="columns is-centered has-text-centered is-max-desktop">
-      <div class="column is-three-fifths">
-<div class="notification is-warning is-light">
-	<a id="demo"></a>
-        <h2 class="title is-3" style="margin-bottom: 0.3em">
-<svg xmlns="http://www.w3.org/2000/svg" height="0.7em" viewBox="0 0 384 512" style="fill: #ccb20c"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M0 256L28.5 28c2-16 15.6-28 31.8-28H228.9c15 0 27.1 12.1 27.1 27.1c0 3.2-.6 6.5-1.7 9.5L208 160H347.3c20.2 0 36.7 16.4 36.7 36.7c0 7.4-2.2 14.6-6.4 20.7l-192.2 281c-5.9 8.6-15.6 13.7-25.9 13.7h-2.9c-15.7 0-28.5-12.8-28.5-28.5c0-2.3 .3-4.6 .9-6.9L176 288H32c-17.7 0-32-14.3-32-32z"></path></svg>
-Interactive examples
-<svg xmlns="http://www.w3.org/2000/svg" height="0.7em" viewBox="0 0 384 512" style="fill: #ccb20c"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M0 256L28.5 28c2-16 15.6-28 31.8-28H228.9c15 0 27.1 12.1 27.1 27.1c0 3.2-.6 6.5-1.7 9.5L208 160H347.3c20.2 0 36.7 16.4 36.7 36.7c0 7.4-2.2 14.6-6.4 20.7l-192.2 281c-5.9 8.6-15.6 13.7-25.9 13.7h-2.9c-15.7 0-28.5-12.8-28.5-28.5c0-2.3 .3-4.6 .9-6.9L176 288H32c-17.7 0-32-14.3-32-32z"></path></svg>
-</h2> 
-    <div style="margin-bottom: 0.3em">Pick a scene below to explore in 3D! Press Space to play/pause, click and drag to change viewpoint.</div>
-
-    <div id="interactive" class="hero">
-      <canvas id="megaview" width="512" height="288"></canvas>
-      <div class=megabuttons>
-        <button onclick="state.other_points=state.other_points=='no'?'points':'no';">Show all points</button><br>
-        <button onclick="state.other_frusta=!state.other_frusta;">Show all frusta</button>
-      </div>
-      <div id="glfailed"><br><br>[Demo requres browser with WebGL2 support.]</div>
-      <div id="loading"><br><br>Loading...</div>
-    </div>
-    <br>
-<div style="font-size: 12px;"> (Note: scene geometry is downsampled for faster loading.)</div>
-    <div class="load">
-      <img src="static/thumbs/pexels-5534310-hd_1080_1920_30fps.png" data-scene="pexels-5534310-hd_1080_1920_30fps"
-      ><img src="static/thumbs/davis-bear.png" data-scene="davis-bear" data-forward=".5" data-zoom="2" data-distance="1.5" data-elevation=0
-      ><img src="static/thumbs/davis-breakdance-flare.png" data-scene="davis-breakdance-flare" data-forward=".5"
-      ><img src="static/thumbs/davis-camel.png" data-scene="davis-camel" data-zoom=2 data-forward=".5" data-distance="1.5" data-elevation=".1" data-rx=".2"
-      ><img src="static/thumbs/davis-car-roundabout.png" data-scene="davis-car-roundabout" data-forward=".5" data-distance=2 data-rx=".4" data-ry="-.5" data-zoom="1.5"
-      ><img src="static/thumbs/davis-car-turn.png" data-scene="davis-car-turn" data-forward="0.5" data-ry=".5"
-      ><img src="static/thumbs/davis-drift-straight.png" data-scene="davis-drift-straight" data-forward=1 data-distance="2.5" data-ry=".8"
-      ><img src="static/thumbs/davis-drone.png" data-scene="davis-drone" data-forward=".5" data-distance="1.5"
-      ><img src="static/thumbs/davis-horsejump-high.png" data-scene="davis-horsejump-high" data-forward=".5" data-distance="1" data-ry="-.5" data-rx=".1"
-      ><img src="static/thumbs/davis-lucia.png" data-scene="davis-lucia" data-elevation=".1" data-zoom="2.5" data-rx=".1" data-forward=".5" data-distance="2"
-      ><img src="static/thumbs/davis-soapbox.png" data-scene="davis-soapbox" data-ry="-1.1" data-forward=".5"
-      ><img src="static/thumbs/dycheck-backpack.png" data-scene="dycheck-backpack" data-forward=".5"
-      ><img src="static/thumbs/dycheck-paper-windmill.png" data-scene="dycheck-paper-windmill" data-rx=".6" data-forward=".5" data-elevation=".1" data-zoom="1.2"
-      ><img src="static/thumbs/pexels-5739690-hd_1920_1080_24fps.png" data-scene="pexels-5739690-hd_1920_1080_24fps" data-ry="0.4" data-rx=".1" data-elevation=".1" data-forward=".5" data-zoom=2
-      ><img src="static/thumbs/pexels-baby_5.png" data-scene="pexels-baby_5" data-zoom=2
-      ><img src="static/thumbs/pexels-butterfly.png" data-scene="pexels-butterfly" data-elevation=".15" data-zoom=2 data-forward=".3" data-distance=2
-      ><img src="static/thumbs/pexels-cat-piano.png" data-scene="pexels-cat-piano" data-rx=".15" data-zoom=2 data-distance=2 data-forward="1.5" data-elevation=".1"
-      ><img src="static/thumbs/pexels-seal.png" data-scene="pexels-seal" data-zoom=5 data-rx=".2" data-elevation=".03" data-forward=".5" data-distance=2
-      ><img src="static/thumbs/pexels-skiing.png" data-scene="pexels-skiing" data-forward=".5">
-      
-      <!-- Aleks: removing these so we don't have too many examples --> 
-      <!-- <img src="static/thumbs/davis-bmx-trees.png" data-scene="davis-bmx-trees" data-zoom="2.5" data-rx=".4" data-ry="-.5"> -->
-      <!-- <img src="static/thumbs/davis-cat-girl.png" data-scene="davis-cat-girl" data-zoom=2 data-rx=".4"> -->
-      <!-- <img src="static/thumbs/dycheck-spin.png" data-scene="dycheck-spin" data-rx="-1.1" data-elevation=".1" data-forward=".5" data-distance=2 data-zoom="1.5"> -->
-      <!-- <img src="static/thumbs/davis-drift-chicane.png" data-scene="davis-drift-chicane" data-forward=1 data-rx=".1" data-ry="-.5" data-zoom=".8"> --> 
-      <!-- <img src="static/thumbs/dycheck-apple.png" data-scene="dycheck-apple" data-zoom="1.5" data-rx=".2"> --> 
-      <!-- <img src="static/thumbs/dycheck-pillow.png" data-scene="dycheck-pillow" data-rx=".1" data-zoom="1.5"> --> 
-      <!-- <img src="static/thumbs/dycheck-sriracha-tree.png" data-scene="dycheck-sriracha-tree" data-zoom=2> -->
-      <!-- <img src="static/thumbs/dycheck-teddy.png" data-scene="dycheck-teddy" data-zoom=2> -->
-      <!-- <img src="static/thumbs/pexels-cat-spinning.png" data-scene="pexels-cat-spinning" data-zoom=2> --> 
-      <!-- <img src="static/thumbs/davis-elephant.png" data-scene="davis-elephant" data-zoom="2.5"> -->
-      <!-- <img src="static/thumbs/davis-rhino.png" data-scene="davis-rhino" data-zoom="2.5"> -->
-    </div>
-    </center>
-</div><br>
-
 </section>
 
 <!-- <section> -->

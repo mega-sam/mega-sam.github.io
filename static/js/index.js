@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			slidesToShow: 3,
 			loop: true,
 			infinite: true,
+			initialSlide: 2,
 			autoplay: false,
 			autoplaySpeed: 3000,
 			pagination: false,
